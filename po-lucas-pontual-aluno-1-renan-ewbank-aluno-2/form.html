@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>Contato | Sistemas para Internet</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+    fieldset{
+        border: none;
+    }
+    input[type="checkbox"]{
+        float:left;
+        position: relative;
+        margin: 4px 0 0;
+        line-height: normal;
+        width: 20px;
+        height: 20px;
+        left: 640px;
+        bottom: -5px;
+    }
+    label{
+        font-size: 1.3rem
+    }
+    #telefone{
+        width: 150px;
+    }
+    form{
+        margin-top: 50px;
+    }
+    .infocontato{
+        font-size: 1.4rem;
+    }
+    button[type="submit"]{
+        font-size: 1.6rem;
+        font-family: Bangers;
+    }
+    button[type="submit"]:hover{
+        background-color: grey;
+        cursor: pointer;
+    }
+
+</style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul id="ulnav">
+            <li><a href="index.html" class="navlink">PROJETO ORIENTADO</a></li>
+            <li><a href="lucaspontual.html" class="navlink">Lucas Pontual</a> </li>
+            <li><a href="renanewbank.html" class="navlink">Renan Ewbank</a></li>
+            <li><a href="tabela.html" class="navlink">Tabela de curiosidades</a></li>
+            <li><a href="Sites.html" class="navlink">Sites Favoritos</a></li>
+            <li><a href="form.html" class="navlink">Contato</a></li>
+        </ul>
+        </nav>
+    </header>
+<main>
+
+    <h2 class="comicbox3">Preencha o formulário abaixo para enviar uma mensagem a nossa equipe de atendimento.</h2>
+        <form method="post" action="http://hub.fatecrl.edu.br/sobrino/recebe-v2.php">
+            <fieldset>
+            <legend class="comicbox4 infocontato">Informações de retorno de contato:</legend>
+            <p>
+            <label for="nome" class="comicbox4">Nome</label><br>
+            <input type="text" name="nome" id="nome" size="35" maxlength="35" class="comicbox4" required placeholder="Ex: João da Silva">
+        </p>
+
+        <p>
+            <label for="email" class="comicbox4">E-mail</label><br>
+            <input type="email" name="email" id="email" size="35" maxlength="50" class="comicbox4" placeholder="Ex: joaozinhosilva23@gmail.com">
+        </p>
+
+        <p>
+            <label for="telefone" class="comicbox4">Telefone</label><br>
+            <input type="tel" name="telefone" id="telefone" size="12" maxlength="14" class="comicbox4" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" inputmode="numeric" placeholder="Ex: 99 99999-9999">
+        </p>
+        </fieldset>
+        <section>
+            <label for="motivo-contato" class="comicbox4">Selecione o motivo de contato:</label><br>
+
+            <select name="motivo-contato" id="motivo-contato"  class="comicbox4">
+
+                <option value="">Selecione</option>
+                <option value="sugestao">Sugestão</option>
+                <option value="informacao">Informação</option>
+                <option value="elogio">Elogio</option>
+                <option value="solicitacao">Solicitação</option>
+                <option value="reclamacao">Reclamação</option>
+
+            </select>
+            <p>
+                <label for="mensagem" class="comicbox4">Mensagem</label><br>
+                <textarea name="mensagem" id="mensagem" rows="8" cols="60"  class="comicbox4" placeholder="Insira aqui sua mensagem..."></textarea>
+            </p>
+        </section>
+        <fieldset>
+            <legend class="comicbox4 infocontato">Aceito ser contatado via:</legend>
+
+            <input type="checkbox" name="aceita-contato-whatsapp" value="whatsapp" id="aceita-contato-whatsapp">
+            <label for="aceita-contato-whatsapp" class="comicbox4">WhatsApp</label><br>
+
+            <input type="checkbox" name="aceita-contato-e-mail" value="email" id="aceita-contato-e-mail">
+            <label for="aceita-contato-e-mail" class="comicbox4">E-mail</label><br>
+
+            <input type="checkbox" name="aceita-contato-telefone" value="telefone" id="aceita-contato-telefone">
+            <label for="aceita-contato-telefone" class="comicbox4">Telefone</label>
+
+        </fieldset><br>
+
+        <button type="submit" class="comicbox4">Enviar</button>
+
+        </form>
+</main>
+
+</body>
+</html>
